@@ -29,10 +29,12 @@ realizziamo le specifiche scritte sopra. La risposta finale
 5 - applicare eventuali sconti 
 6 - "stampare" il prezzo del biglietto
 */
-const targetPrezzoFianle = document.getElementById("prezzoFinale")
+const targetPrezzoFianle = document.getElementById("prezzoFinale");
 const kilometri = document.getElementById("kilometri");
 const età = document.getElementById("età");
+const nomeCognome = document.getElementById("nomeCognome");
 const button = document.getElementById("button");
+
 
 
 
@@ -41,29 +43,44 @@ button.addEventListener("click", function(){
     let valoreKilometri = parseInt(kilometri.value);
     let valoreEtà = parseInt(età.value);
     //verifico che i dati inseriti siano corretti
-    if (isNaN(valoreKilometri) || isNaN(valoreEtà)){
-
-    }else{
-
+    if (!isNaN(valoreKilometri) || !isNaN(valoreEtà)){
+        
         //calcolo il prezzo del biglietto 
         let prezzoBiglietto = valoreKilometri * 0.21;
     
     
         if (età.value > 65){
-            let bigliettoIntero = prezzoBiglietto
+            let bigliettoIntero = prezzoBiglietto;
             prezzoBiglietto -= (prezzoBiglietto * 4) / 10;
             
         }
         else if(età.value < 18 ){
-            let bigliettoIntero = prezzoBiglietto
+            let bigliettoIntero = prezzoBiglietto;
             prezzoBiglietto -= (prezzoBiglietto * 2) / 10;
             
-        }
+        };
     
         prezzoBiglietto = prezzoBiglietto.toFixed(2);
-        console.log(prezzoBiglietto)
-    
-    }
+        //rendo visibile il biglietto togliendo la classe 
+        
+        document.getElementById("nomeBiglietto").innerText= nomeCognome.value;
+        console.log();
+        //randomizzo i valori di carrozza e treno
+        document.getElementById("carrozzaBiglietto").innerText = Math.floor((Math.random() * 10)+1);
+        document.getElementById("trenoBiglietto").innerText = Math.floor((Math.random() * 10000)+1);
+        document.getElementByid
+        targetPrezzoFianle.innerText =  "£" + prezzoBiglietto; 
+
+    };
+
+
+
+
+
+
+
+
+
 
 });
 

@@ -11,12 +11,60 @@
 
 </head>
 <body>
-    <div class="contenitore">
-        <input type="text" id="kilometri" placeholder="kilometri" value="100"></input>
-        <input type="text" id="età" placeholder="età" value="1222"></input>
-        <button id="button">Conferma</button>
-        <div id="prezzoIniziale"></div>
-        <div id="prezzoFinale"></div>
+    <h1>Calcola il tuo biglietto </h1>
+    <section class="d-flex justify-content-center align-items-center">
+
+        <div class="contenitore">
+            <form action="#" method="get" class="d-flex justify-content-between">
+                <div class="littleCard">
+                    <label for="nomeCognome">Inserire Nome e Cogome</label>
+                    <input type="text" id="nomeCognome">
+                </div>
+                <div class="littleCard">
+                    <label for="kilometri">Quanti kilometri farai?</label>
+                    <input type="text" id="kilometri" placeholder="kilometri" value="100">
+                </div>
+                <div class="littleCard">
+                    <label for="età">Quanti anni hai?</label>
+                    <input type="text" id="età" placeholder="età" value="1222">
+                </div>
+                <button id="button" type="submit">Conferma</button>
+            </form>
+            
+        </div>
+
+    </section>
+    <div  id="biglietto" class="contenitore-biglietto d-flex align-items-center justify-content-center ">
+        <div class="container">
+            <h1 class="col-12 text-center">IL tuo Biglietto</h1>
+            
+            <div class="row text-center text-white">
+                <div class="col">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/trenitalia-logo-png-transparent.png" alt="logo treni">
+                </div>
+                <div class="col  d-flex flex-column justify-content-center " >
+                    <h2>Nome</h2>
+                    <h4 id="nomeBiglietto"></h4>
+
+                </div>
+                <div class="col col  d-flex flex-column justify-content-center " >
+                    <h2>Carrozza</h2>
+                    <h4 id="carrozzaBiglietto"></h4>
+                    
+                </div>
+                <div class="col col  d-flex flex-column justify-content-center " >
+                    <h2>Treno</h2>
+                    <h4 id="trenoBiglietto"></h4>
+                    
+                </div>
+
+                <div class="col col  d-flex flex-column justify-content-center ">
+                    <h2>Costo corsa</h2>
+                    <h4 id="prezzoFinale"></h4>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>
